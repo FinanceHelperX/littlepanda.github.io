@@ -18,6 +18,11 @@
 </head>
 
 <body>
+    
+    <div class="home">
+
+   
+    
     <header>
         <span>
             <img src="./dcm.png" data-v-e1308fe7>
@@ -108,7 +113,13 @@
                 <p><strong>捐赠0.1 BNB获得一万枚DCM</strong></p>
                 <p><strong>每人仅可以捐赠一次</strong></p>
                 
-                <button onclick="buy()"><strong>捐献0.1BNB</strong></button>
+                <button  id ="buy" onclick="buy()" >
+                    <span id="buycontent">
+
+                         <strong>捐献0.1BNB</strong>
+                    </span>
+                   
+                </button>
             </div>
             <span >余额：<strong id="amountBNB">0.00</strong> BNB</span>
 
@@ -182,6 +193,8 @@
 
     </section>
 
-    
+         
+</div>
+
 </body>
 </html>
