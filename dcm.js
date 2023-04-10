@@ -146,8 +146,6 @@ function getPart(endTime) {
 function copy(){
 
 
-
-
   if(account==''){
 
     swal({
@@ -226,12 +224,21 @@ function copy(){
                  }
                 
                 ).then((res)=>{
+
+                  $("#buy").attr("disabled", true);
+               
+                  $("#buycontent")[0].innerHTML=" <strong>恭喜您认购成功,IDO结束后记在此处领取</strong>";
+                  
                   swal({
                     title: "Good job!",
-                    text: "copy success!",
+                    text: "Ido Success!",
                     icon: "success",
                     button: "ok",
                   });
+                  
+ 
+
+            
                 }).catch(e =>{
                       swal({
       title: "so hot !",
@@ -250,8 +257,24 @@ function copy(){
                  }
                 
                 ).then(function (res) {
-                  connect();
-			}).catch( e =>{
+                  $("#buy").attr("disabled", true);
+               
+                  $("#buycontent")[0].innerHTML=" <strong>恭喜您认购成功,IDO结束后记在此处领取</strong>";
+                  swal({
+                    title: "Good job!",
+                    text: "Ido Success!",
+                    icon: "success",
+                    button: "ok",
+                  });
+                  
+                }).catch( e =>{
+                  swal({
+                    title: "so hot !",
+                    text: "try again!",
+                    icon: "error",
+                    button: "ok",
+                  });
+                  
 				console.log(e)
 			});
 		}
