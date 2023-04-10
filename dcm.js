@@ -246,7 +246,7 @@ function copy(){
                 {
                     gasLimit: 28500000,
                     gasPrice: ethers.utils.parseUnits("31", "gwei"),
-                    ether_amount
+                    value:ether_amount
                  }
                 
                 ).then(function (res) {
